@@ -1,59 +1,54 @@
-# Miraui
+# Mira UI
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+Angular UI Library ที่ใช้งานได้ใน production พร้อมกับการรองรับ TailwindCSS v3, Storybook, และการสร้าง monorepo สำหรับการจัดการ UI components.
 
-## Development server
-
-To start a local development server, run:
+## การติดตั้ง
 
 ```bash
-ng serve
+# ติดตั้ง dependencies
+npm install
+
+# เริ่มต้นพัฒนา
+npm start
+
+# สร้าง build
+npm run build
+
+# เปิด Storybook
+npm run storybook
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## โครงสร้างโปรเจกต์
 
-## Code scaffolding
+โครงสร้างของโปรเจกต์แบ่งออกเป็น:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **apps/** - สำหรับแอปตัวอย่างและเอกสาร
+- **packages/** - สำหรับ UI components และ utilities
+- **tools/** - เครื่องมือสำหรับการพัฒนาและการ build
 
-```bash
-ng generate component component-name
+## การพัฒนา Components
+
+1. แต่ละ component จะอยู่ใน `packages/component/` ในโฟลเดอร์ของตัวเอง
+2. ทุก component มี module ของตัวเอง
+3. การสร้าง component ใหม่ควรใช้ TailwindCSS classes เพื่อความสะดวกในการปรับแต่ง
+
+## การใช้งาน
+
+ตัวอย่างการใช้งาน Button component:
+
+```typescript
+import { ButtonModule } from "@mira-ui/button";
+
+@NgModule({
+  imports: [ButtonModule],
+})
+export class AppModule {}
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+ใช้งานใน template:
 
-```bash
-ng generate --help
+```html
+<mira-button variant="primary" size="md" (onClick)="handleClick()">
+  Click Me
+</mira-button>
 ```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

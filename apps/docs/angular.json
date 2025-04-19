@@ -10,20 +10,20 @@
           "style": "css"
         }
       },
-      "root": "apps/docs",
-      "sourceRoot": "apps/docs/src",
+      "root": "",
+      "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/docs",
-            "index": "apps/docs/src/index.html",
-            "browser": "apps/docs/src/main.ts",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "apps/docs/tsconfig.app.json",
+            "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "css",
             "assets": [
               {
@@ -32,7 +32,7 @@
               }
             ],
             "styles": [
-              "apps/docs/src/styles.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -82,7 +82,7 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "apps/docs/tsconfig.spec.json",
+            "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "css",
             "assets": [
               {
@@ -91,7 +91,7 @@
               }
             ],
             "styles": [
-              "apps/docs/src/styles.css"
+              "src/styles.css"
             ],
             "scripts": []
           }
