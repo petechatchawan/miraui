@@ -1,6 +1,6 @@
 export const ButtonTheme = {
   base: [
-   "z-0",
+    "z-0",
     "group",
     "relative",
     "inline-flex",
@@ -38,55 +38,38 @@ export const ButtonTheme = {
     lg: ["px-6", "min-w-24", "h-12", "text-base", "gap-3", "rounded-lg"],
   },
 
-
   radius: {
     none: ["!rounded-none"],
     sm: ["!rounded-sm"],
     md: ["!rounded-md"],
     lg: ["!rounded-lg"],
     full: ["!rounded-full"],
-  },  
+  },
 
-  // Theme by variant type
   color: {
     default: {
-      solid: ["bg-gray-500", "text-white"],
-      light: ["bg-gray-100", "text-gray-800"],
-      ghost: ["bg-transparent", "text-gray-500"],
-      bordered: ["border", "border-gray-500", "text-gray-500", "bg-transparent"],
+      solid: ["bg-default", "text-default-foreground"],
+      light: ["bg-default-100", "text-default-800"],
+      ghost: ["bg-transparent", "text-default-500"],
+      bordered: ["border", "border-default", "text-default", "bg-transparent"],
     },
     primary: {
-      solid: ["bg-blue-500", "text-white"],
-      light: ["bg-blue-100", "text-blue-700"],
-      ghost: ["bg-transparent", "text-blue-500"],
-      bordered: [
-        "border",
-        "border-blue-500",
-        "text-blue-500",
-        "bg-transparent",
-      ],
+      solid: ["bg-primary", "text-default-foreground"],
+      light: ["bg-primary-100", "text-primary-700"],
+      ghost: ["bg-transparent", "text-primary-500"],
+      bordered: ["border", "border-primary-500", "text-primary-500", "bg-transparent"],
     },
     secondary: {
       solid: ["bg-gray-500", "text-white"],
       light: ["bg-gray-100", "text-gray-800"],
       ghost: ["bg-transparent", "text-gray-500"],
-      bordered: [
-        "border",
-        "border-gray-500",
-        "text-gray-500",
-        "bg-transparent",
-      ],
+      bordered: ["border", "border-gray-500", "text-gray-500", "bg-transparent"],
     },
     success: {
       solid: ["bg-green-500", "text-white"],
       light: ["bg-green-100", "text-green-700"],
       ghost: ["bg-transparent", "text-green-500"],
-      bordered: [
-        "border",
-        "border-green-500",
-        "text-green-500",
-        "bg-transparent",
-      ],
+      bordered: ["border", "border-green-500", "text-green-500", "bg-transparent"],
     },
     danger: {
       solid: ["bg-red-500", "text-white"],
@@ -98,23 +81,13 @@ export const ButtonTheme = {
       solid: ["bg-yellow-500", "text-white"],
       light: ["bg-yellow-100", "text-yellow-700"],
       ghost: ["bg-transparent", "text-yellow-500"],
-      bordered: [
-        "border",
-        "border-yellow-500",
-        "text-yellow-500",
-        "bg-transparent",
-      ],
+      bordered: ["border", "border-yellow-500", "text-yellow-500", "bg-transparent"],
     },
     info: {
       solid: ["bg-blue-500", "text-white"],
       light: ["bg-blue-100", "text-blue-700"],
       ghost: ["bg-transparent", "text-blue-500"],
-      bordered: [
-        "border",
-        "border-blue-500",
-        "text-blue-500",
-        "bg-transparent",
-      ],
+      bordered: ["border", "border-blue-500", "text-blue-500", "bg-transparent"],
     },
     disabled: {
       solid: ["bg-gray-300", "text-gray-500"],
@@ -123,6 +96,8 @@ export const ButtonTheme = {
       bordered: ["border-gray-300", "text-gray-500"],
     },
   },
+
   fullWidth: ["w-full"],
+
   disabled: ["opacity-50", "pointer-events-none"],
 };

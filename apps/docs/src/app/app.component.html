@@ -1,50 +1,143 @@
-<div class="gap-4 p-4 flex flex-col items-center justify-center">
-  <h1 class="text-3xl font-bold underline">Mira UI!</h1>
+<div class="flex flex-col items-center justify-center gap-4 p-4">
+  <div class="bg-primary rounded p-4 text-white">Hello from MiraUI 🌈</div>
+  <!-- หรือระบุเฉดสี -->
+  <div class="bg-primary-500 rounded p-4 text-white">Hello with specific shade 🌈</div>
   <div class="flex flex-col gap-4">
-    <p>Normal</p>
+    <p class="bg-default text-primary">Normal</p>
     <div class="flex flex-wrap gap-4">
-      <miraui-button label="Default" color='default' variant='solid' size="md" ></miraui-button>
-      <miraui-button label="Primary" color='primary' variant='solid' size="md" ></miraui-button>
-  <miraui-button label="Secondary" color='secondary' variant='solid' size="md" ></miraui-button>
-  <miraui-button label="Success" color='success' variant='solid' size="md" ></miraui-button>
-  <miraui-button label="Danger" color='danger' variant='solid' size="md"></miraui-button>
-  <miraui-button label="Warning" color='warning' variant='solid' size="md" ></miraui-button>
-  <miraui-button label="Info" color='info' variant='solid' size="md" ></miraui-button>
+      <miraui-button label="Default" color="default" variant="solid" size="md"></miraui-button>
+      <miraui-button label="Primary" color="primary" variant="solid" size="md"></miraui-button>
+      <miraui-button label="Secondary" color="secondary" variant="solid" size="md"></miraui-button>
+      <miraui-button label="Success" color="success" variant="solid" size="md"></miraui-button>
+      <miraui-button label="Danger" color="danger" variant="solid" size="md"></miraui-button>
+      <miraui-button label="Warning" color="warning" variant="solid" size="md"></miraui-button>
+      <miraui-button label="Info" color="info" variant="solid" size="md"></miraui-button>
     </div>
 
     <p>Radius</p>
     <div class="flex flex-wrap gap-4">
-      <miraui-button label="Full" radius="full" color='default' variant='solid' size="md"></miraui-button>
-      <miraui-button label="Small" radius="sm" color='default' variant='solid' size="md"></miraui-button>
-  <miraui-button label="Medium" radius="md" color='default' variant='solid' size="md"></miraui-button>
-  <miraui-button label="Large" radius="lg" color='default' variant='solid' size="md"></miraui-button>
-  <miraui-button label="None" radius="none" color='default' variant='solid' size="md"></miraui-button>
+      <miraui-button
+        label="Full"
+        radius="full"
+        color="default"
+        variant="solid"
+        size="md"></miraui-button>
+      <miraui-button
+        label="Small"
+        radius="sm"
+        color="default"
+        variant="solid"
+        size="md"></miraui-button>
+      <miraui-button
+        label="Medium"
+        radius="md"
+        color="default"
+        variant="solid"
+        size="md"></miraui-button>
+      <miraui-button
+        label="Large"
+        radius="lg"
+        color="default"
+        variant="solid"
+        size="md"></miraui-button>
+      <miraui-button
+        label="None"
+        radius="none"
+        color="default"
+        variant="solid"
+        size="md"></miraui-button>
     </div>
-
 
     <p>Bordered</p>
     <div class="flex flex-wrap gap-4">
-      <miraui-button label="Default" color='default' variant='bordered' size="md" radius="full"></miraui-button>
-      <miraui-button label="Primary" color='primary' variant='bordered' size="md" radius="full"></miraui-button>
-      <miraui-button label="Secondary" color='secondary' variant='bordered' size="md" radius="full"></miraui-button>
-      <miraui-button label="Success" color='success' variant='bordered' size="md" radius="full"></miraui-button>
-      <miraui-button label="Danger" color='danger' variant='bordered' size="md" radius="full"></miraui-button>
-      <miraui-button label="Warning" color='warning' variant='bordered' size="md" radius="full"></miraui-button>
-      <miraui-button label="Info" color='info' variant='bordered' size="md" radius="full"></miraui-button>
+      <miraui-button
+        label="Default"
+        color="default"
+        variant="bordered"
+        size="md"
+        radius="full"></miraui-button>
+      <miraui-button
+        label="Primary"
+        color="primary"
+        variant="bordered"
+        size="md"
+        radius="full"></miraui-button>
+      <miraui-button
+        label="Secondary"
+        color="secondary"
+        variant="bordered"
+        size="md"
+        radius="full"></miraui-button>
+      <miraui-button
+        label="Success"
+        color="success"
+        variant="bordered"
+        size="md"
+        radius="full"></miraui-button>
+      <miraui-button
+        label="Danger"
+        color="danger"
+        variant="bordered"
+        size="md"
+        radius="full"></miraui-button>
+      <miraui-button
+        label="Warning"
+        color="warning"
+        variant="bordered"
+        size="md"
+        radius="full"></miraui-button>
+      <miraui-button
+        label="Info"
+        color="info"
+        variant="bordered"
+        size="md"
+        radius="full"></miraui-button>
     </div>
 
     <p>Disabled</p>
     <div class="flex flex-wrap gap-4">
-      <miraui-button label="Default" [disabled]="true" color='default' variant='solid' size="md"></miraui-button>
-      <miraui-button label="Primary" [disabled]="true" color='primary' variant='solid' size="md"></miraui-button>
-      <miraui-button label="Secondary" [disabled]="true" color='secondary' variant='solid' size="md"></miraui-button>
-      <miraui-button label="Success" [disabled]="true" color='success' variant='solid' size="md"></miraui-button>
-      <miraui-button label="Danger" [disabled]="true" color='danger' variant='solid' size="md"></miraui-button>
-      <miraui-button label="Warning" [disabled]="true" color='warning' variant='solid' size="md"></miraui-button>
-      <miraui-button label="Info" [disabled]="true" color='info' variant='solid' size="md"></miraui-button>
+      <miraui-button
+        label="Default"
+        [disabled]="true"
+        color="default"
+        variant="solid"
+        size="md"></miraui-button>
+      <miraui-button
+        label="Primary"
+        [disabled]="true"
+        color="primary"
+        variant="solid"
+        size="md"></miraui-button>
+      <miraui-button
+        label="Secondary"
+        [disabled]="true"
+        color="secondary"
+        variant="solid"
+        size="md"></miraui-button>
+      <miraui-button
+        label="Success"
+        [disabled]="true"
+        color="success"
+        variant="solid"
+        size="md"></miraui-button>
+      <miraui-button
+        label="Danger"
+        [disabled]="true"
+        color="danger"
+        variant="solid"
+        size="md"></miraui-button>
+      <miraui-button
+        label="Warning"
+        [disabled]="true"
+        color="warning"
+        variant="solid"
+        size="md"></miraui-button>
+      <miraui-button
+        label="Info"
+        [disabled]="true"
+        color="info"
+        variant="solid"
+        size="md"></miraui-button>
     </div>
   </div>
-
-
-
 </div>
