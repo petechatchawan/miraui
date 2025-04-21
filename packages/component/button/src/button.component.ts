@@ -1,16 +1,8 @@
+import {CommonModule} from "@angular/common";
+import {Component, EventEmitter, HostBinding, HostListener, Input, Output} from "@angular/core";
+import {ButtonTheme} from "@miraui/theme";
 
-import { CommonModule } from "@angular/common";
-import {
-  Component,
-  EventEmitter,
-  HostBinding,
-  HostListener,
-  Input,
-  Output,
-} from "@angular/core";
-import { ButtonTheme } from "@miraui/theme";
-
-@Component({ 
+@Component({
   selector: "miraui-button",
   standalone: true,
   imports: [CommonModule],
@@ -30,8 +22,7 @@ import { ButtonTheme } from "@miraui/theme";
       (mouseup)="isPressed = false"
       (mouseleave)="isPressed = false"
       (focus)="handleFocus($event)"
-      (blur)="handleBlur()"
-    >
+      (blur)="handleBlur()">
       <ng-container *ngIf="label">{{ label }}</ng-container>
       <ng-content></ng-content>
     </button>
@@ -40,7 +31,7 @@ import { ButtonTheme } from "@miraui/theme";
 export class ButtonComponent {
   @Input() label: string | undefined;
   @Input() color: keyof typeof ButtonTheme.color = "default";
-  @Input() variant: keyof typeof ButtonTheme.color[keyof typeof ButtonTheme.color] = "solid";
+  @Input() variant: keyof (typeof ButtonTheme.color)[keyof typeof ButtonTheme.color] = "solid";
   @Input() size: keyof typeof ButtonTheme.size = "md";
   @Input() radius: keyof typeof ButtonTheme.radius = "md";
   @Input() fullWidth: boolean = false;
@@ -53,24 +44,22 @@ export class ButtonComponent {
     return this.fullWidth;
   }
 
-
   isHovered = false;
   isFocused = false;
   isFocusVisible = false;
   isPressed = false;
 
-  @HostListener('focus', ['$event'])
+  @HostListener("focus", ["$event"])
   handleFocus(event: FocusEvent) {
     // วิธีที่ 1: ตรวจสอบกับ PointerEvent
-    if ('pointerType' in event) {
+    if ("pointerType" in event) {
       // ตรวจสอบว่า event มาจากการทัช
-      this.isFocusVisible = event.pointerType !== 'touch';
+      this.isFocusVisible = event.pointerType !== "touch";
     } else {
       // วิธีที่ 2: ใช้ matchMedia สำหรับทัช
-      this.isFocusVisible = !window.matchMedia('(pointer: coarse)').matches;
+      this.isFocusVisible = !window.matchMedia("(pointer: coarse)").matches;
     }
   }
-  
 
   @HostListener("blur")
   handleBlur() {
@@ -78,16 +67,14 @@ export class ButtonComponent {
     this.isFocusVisible = false;
   }
 
-  
   getClassesMap(): string {
     return [
       ...ButtonTheme.base,
-      ...ButtonTheme.size[this.size],  // ขนาดจาก size (อาจจะมี rounded)
+      ...ButtonTheme.size[this.size], // ขนาดจาก size (อาจจะมี rounded)
       ...(this.fullWidth ? ButtonTheme.fullWidth : []),
       ...(this.disabled ? ButtonTheme.disabled : []),
-      ...(ButtonTheme.radius[this.radius] || []),  // รวบรวม radius หลัง size เพื่อให้ radius มีผล
-      ...ButtonTheme.color[this.color][this.variant],  // ให้สีมาหลังสุด
+      ...(ButtonTheme.radius[this.radius] || []), // รวบรวม radius หลัง size เพื่อให้ radius มีผล
+      ...ButtonTheme.color[this.color][this.variant], // ให้สีมาหลังสุด
     ].join(" ");
   }
-  
 }

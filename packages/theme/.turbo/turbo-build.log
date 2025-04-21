@@ -8,18 +8,18 @@
 [34mCLI[39m tsup v8.3.5
 [34mCLI[39m Target: esnext
 [34mCJS[39m Build start
+[32mCJS[39m [1mdist/plugin.js            [22m[32m10.77 KB[39m
 [32mCJS[39m [1mdist/components/input.js  [22m[32m14.00 B[39m
-[32mCJS[39m [1mdist/tokens/colors.js     [22m[32m2.70 KB[39m
-[32mCJS[39m [1mdist/index.js             [22m[32m8.00 KB[39m
+[32mCJS[39m [1mdist/tokens/colors.js     [22m[32m8.90 KB[39m
+[32mCJS[39m [1mdist/index.js             [22m[32m14.18 KB[39m
+[32mCJS[39m [1mdist/components/button.js [22m[32m4.17 KB[39m
 [32mCJS[39m [1mdist/tokens/radius.js     [22m[32m14.00 B[39m
-[32mCJS[39m [1mdist/plugin.js            [22m[32m4.76 KB[39m
-[32mCJS[39m [1mdist/components/button.js [22m[32m4.16 KB[39m
-[32mCJS[39m ⚡️ Build success in 49ms
+[32mCJS[39m ⚡️ Build success in 181ms
 DTS Build start
-DTS ⚡️ Build success in 1796ms
-DTS dist/index.d.ts             177.00 B
+DTS ⚡️ Build success in 4536ms
+DTS dist/index.d.ts             215.00 B
 DTS dist/components/input.d.ts  13.00 B
 DTS dist/plugin.d.ts            232.00 B
 DTS dist/components/button.d.ts 1.52 KB
-DTS dist/tokens/colors.d.ts     1.80 KB
+DTS dist/tokens/colors.d.ts     3.17 KB
 DTS dist/tokens/radius.d.ts     13.00 B

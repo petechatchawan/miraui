@@ -79,8 +79,9 @@ export const cyan = {
 
 export const themeColors = {
   default: {
-    DEFAULT: "#6b7280",
-    foreground: "#ffffff",
+    ...gray,
+    foreground: readableColor(gray[500]),
+    DEFAULT: gray[500],
   },
   primary: {
     ...blue,

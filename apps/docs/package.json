@@ -22,7 +22,9 @@
     "rxjs": "~7.8.0",
     "tailwindcss": "^4.1.4",
     "tslib": "^2.3.0",
-    "zone.js": "~0.15.0"
+    "zone.js": "~0.15.0",
+    "@miraui/badge": "workspace:*",
+    "@miraui/button": "workspace:*"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.2.8",

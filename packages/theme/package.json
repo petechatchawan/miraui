@@ -2,6 +2,9 @@
   "name": "@miraui/theme",
   "version": "1.0.0",
   "main": "src/index.ts",
+  "files": [
+    "src/**/*"
+  ],
   "scripts": {
     "build": "tsup src --dts",
     "build:fast": "tsup src",

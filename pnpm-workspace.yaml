@@ -2,6 +2,6 @@
 packages:
   # ระบุตำแหน่งของ package ทั้งหมดที่ต้องการให้อยู่ใน workspace
   # ใช้ glob patterns (เหมือนใน .gitignore)
-  - "packages/*" # รูปแบบที่นิยม: เก็บ library/components ในโฟลเดอร์ packages
-  - "apps/*" # ตัวอย่าง: เก็บ applications ในโฟลเดอร์ apps
+  - "packages/**" # รูปแบบที่นิยม: เก็บ library/components ในโฟลเดอร์ packages
+  - "apps/**" # ตัวอย่าง: เก็บ applications ในโฟลเดอร์ apps
   # - 'shared/**' # ตัวอย่าง: ถ้ามีโครงสร้างซับซ้อน
